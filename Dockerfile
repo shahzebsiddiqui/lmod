@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-env LMOD_VER 
+env LMOD_VER 8.3.1
 MAINTAINER Shahzeb Siddiqui <shahzebmsiddiqui@gmail.com>
 
 RUN yum -y install git tar which bzip2 xz \
