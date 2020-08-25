@@ -15,6 +15,7 @@ WORKDIR /build
 RUN curl -LO http://github.com/TACC/Lmod/archive/${LMOD_VER}.tar.gz
 RUN mv /build/${LMOD_VER}.tar.gz /build/Lmod-${LMOD_VER}.tar.gz
 RUN tar xvf Lmod-${LMOD_VER}.tar.gz
+WORKDIR /build/Lmod-${LMOD_VER}
 RUN ./configure --prefix=/opt/apps && make install
 RUN ln -s /opt/apps/lmod/lmod/init/profile /etc/profile.d/z00_lmod.sh
 RUN ln -s /opt/apps/lmod/lmod/init/cshrc /etc/profile.d/z00_lmod.csh
